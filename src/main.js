@@ -3,7 +3,9 @@ import { filtrarPorCasa } from './data.js';
 
 const funcionMostrar = (arregloPersonajes) => {
     const divsContenedor = document.querySelector("#seccionDeDatos");
-//borrar el contenido de divsContenedor
+    //borrar el contenido de divsContenedor
+    //document.getElementById("seccionDeDatos").innerHTML = "";
+
     arregloPersonajes.map(function (harry) {
 
         const newDiv = document.createElement("div");
