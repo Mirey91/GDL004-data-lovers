@@ -9,19 +9,26 @@
   </head>
 
   <body>
-    <p>Harry Potter</p>
-    <div id = "seccionDeDatos">Todo Comienza aqui</div>
-    
-    <div id="root"></div>
-
-  <body background= "images/fondo de estrellas.jpg">
     <div>
       <center><img src= "images/Harry potter logo.png"></center>
       <input type= "text" id= "buscador" placeholder= "Buscar" class= "buscador" align="right">
     <br>
     <p1 class= "p1"> A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z</p1>
+<br>
+<form>
+      <input list = "casas" name="casas">
+      <datalist id="casas">
+        <option value="Gryffindor" id="gry">
+        <option value="Slytherin" id="sly">
+        <option value="Hufflepuff" id="huf">
+        <option value="Ravenclaw" id="rav">
+      </datalist>
+      <input type="submit" id="filtrar">
+    </form>
+    <div id = "seccionDeDatos"></div>
+    
+    <div id="root"></div>
 
-      <p>holi</p>
     <script type="module" src="main.js"></script>
   </body>
 </html>

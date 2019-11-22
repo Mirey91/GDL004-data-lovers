@@ -6,3 +6,24 @@ p1{
 buscador{
   text-align: right;
 }
+body{
+  background-image: url("http://www.hdfondos.eu/preview/get_photo/397228/2560/1600.jpg");
+}
+.personajesOrdenados{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  color: darkgoldenrod;
+}
+
+.masInfo {
+  display: none;
+}
+
+.img {
+  padding: 10px;
+  width: 150px;
+  height: 200px;
+}
