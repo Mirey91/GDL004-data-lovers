@@ -18,10 +18,11 @@ p1{
   color: darkgoldenrod;
 }
 
-masInfo {
+/*
+.masInfo {
   display: none;
 }
-
+*/
 .img {
   padding: 10px;
   width: 150px;
@@ -51,3 +52,4 @@ masInfo {
   opacity:1;
   pointer-events:auto;
 }
+*/
