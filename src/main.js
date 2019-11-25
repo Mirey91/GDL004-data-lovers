@@ -1,8 +1,12 @@
 import potterObj from './data/potter/potter.js';
 import { filtrarPorCasa } from './data.js';
 
+
+
 const funcionMostrar = (arregloPersonajes) => {
     const divsContenedor = document.querySelector("#seccionDeDatos");
+    divsContenedor.classList.add("personajesOrdenados");
+
     //borrar el contenido de divsContenedor
     //document.getElementById("seccionDeDatos").innerHTML = "";
 
@@ -11,13 +15,22 @@ const funcionMostrar = (arregloPersonajes) => {
         const newDiv = document.createElement("div");
 
         const divOculto = document.createElement("div");
+        divOculto.classList.add("masInfo");
 
         const imgPersonaje = document.createElement("img");
         imgPersonaje.src = harry.image;
+        imgPersonaje.classList.add("img");
 
         const namePersonaje = document.createElement("p");
         const textoName = document.createTextNode(`Name: ${harry.name}`);
         namePersonaje.appendChild(textoName);
+
+//newDiv.addEventListener("click", myFunction);
+//function myFunction(){
+//divOculto.setAttribute("id", "miModal");
+//divOculto.classList.add("modal");
+//console.log(divOculto.classList);
+//}
 
         const casaPersonaje = document.createElement("p");
         const textoCasa = document.createTextNode(`House: ${harry.house}`);
@@ -94,8 +107,15 @@ const funcionMostrar = (arregloPersonajes) => {
     });
 };
 
+
 funcionMostrar(potterObj);
 
+//const genderFilter = potterObj.filter(d => d.gender === "female");
+//console.log(genderFilter);
+
 const resultCasa = filtrarPorCasa('Gryffindor', potterObj);
+
 funcionMostrar(resultCasa);
 console.log(resultCasa);
+
+document.getElementById("filtrar").addEventListener("click",filtrarPorCasa());
