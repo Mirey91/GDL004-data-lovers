@@ -23,10 +23,31 @@
         <option value="Hufflepuff" id="huf">
         <option value="Ravenclaw" id="rav">
       </datalist>
-      <input type="submit" id="filtrar">
+      <input type="button" id="filtrar" value="Filtrar" /> 
     </form>
     <div id = "seccionDeDatos"></div>
-    
+
+    <template id="templatePersonajes">
+      <div><img src="" class="img">
+          <p>Name: <span class="nameSpan"></span> </p>
+          <p>House: <span class="houseSpan"></span></p>
+          <div class="masInfo">
+              <p>Gender: <span class="genderSpan"></span></p>
+              <p>Ancestry: <span class="ancestrySpan"></span></p>
+              <p>Patronus: <span class="patronusSpan"></span></p>
+              <p>Wand:</p>
+              <ul>
+                  <li>Wood: <span class="woodSpan"></span></li>
+                  <li>Core: <span class="coreSpan"></span></li>
+                  <li>Length: <span class="lengthSpan"></span></li>
+              </ul>
+              <p>Eye Colour: <span class="eyeColourSpan"></span></p>
+              <p>Hair Colour: <span class="hairColourSpan"></span></p>
+              <p>Actor: <span class="actorSpan"></span></p>
+              <p></p>
+          </div>
+      </div>
+  </template>
     <div id="root"></div>
 
     <script type="module" src="main.js"></script>
