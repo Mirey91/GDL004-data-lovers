@@ -6,12 +6,13 @@ import { filtrarPorCasa } from './data.js';
 const funcionMostrar = (arregloPersonajes) => {
     const divsContenedor = document.querySelector("#seccionDeDatos");
     divsContenedor.classList.add("personajesOrdenados");
-    
+
     //borrar el contenido de divsContenedor
     document.getElementById("seccionDeDatos").innerHTML = "";
 
     arregloPersonajes.map(function (harry) {
          const todosPersonajesTemplate = document.getElementById("templatePersonajes");
+
 
          const personajeImgSpan = todosPersonajesTemplate.content.querySelector(".img");
          personajeImgSpan.src = harry.image;
@@ -52,13 +53,16 @@ const funcionMostrar = (arregloPersonajes) => {
          const contenidoTemplate = todosPersonajesTemplate.content;
          const clonePersonajes = document.importNode(contenidoTemplate, true);
          divsContenedor.appendChild(clonePersonajes);
-
     });
 };
+
 
 funcionMostrar(potterObj);
 
 /*
+//const genderFilter = potterObj.filter(d => d.gender === "female");
+//console.log(genderFilter);
+
 const resultCasa = filtrarPorCasa('Gryffindor', potterObj);
 
 funcionMostrar(resultCasa);

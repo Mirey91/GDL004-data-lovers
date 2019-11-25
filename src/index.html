@@ -8,14 +8,23 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
+  <body background= "images/fondo de estrellas.jpg">
     <div>
       <center><img src= "images/Harry potter logo.png"></center>
-      <input type= "text" id= "buscador" placeholder= "Buscar" class= "buscador" align="right">
+      <input type= "text" id= "buscador" class= "buscador" placeholder= "Search">
     <br>
-    <p1 class= "p1"> A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z</p1>
-<br>
-<form>
+
+    <p1>A  B  C  D  E  F  G  H   I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z</p1>
+    <br><br>
+
+    <input type= "button" id= "filterBy" value= "Filter by">
+    <br><br>
+    <input type= "button" id= "orderBy" value= "Order by">
+    <br><br>
+      <input type= "button" id= "help" value= "Help">
+
+    <br><br>
+    <form>
       <input list = "casas" name="casas">
       <datalist id="casas">
         <option value="Gryffindor" id="gry">
@@ -25,6 +34,7 @@
       </datalist>
       <input type="button" id="filtrar" value="Filtrar" /> 
     </form>
+
     <div id = "seccionDeDatos"></div>
 
     <template id="templatePersonajes">
@@ -49,6 +59,8 @@
       </div>
   </template>
     <div id="root"></div>
+
+    <div class= "personajesOrdenados" id = "seccionDeDatos">Todo Comienza aqui</div>
 
     <script type="module" src="main.js"></script>
   </body>
