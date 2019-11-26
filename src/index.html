@@ -25,17 +25,17 @@
 
     <br><br>
     <form>
-      <input list = "casas" name="casas">
-      <datalist id="casas">
-        <option value="Gryffindor" id="gry">
-        <option value="Slytherin" id="sly">
-        <option value="Hufflepuff" id="huf">
-        <option value="Ravenclaw" id="rav">
-      </datalist>
-      <input type="button" id="filtrar" value="Filtrar" /> 
+       <select id="tiposDeCasa"> 
+        <option value=false>select house</option>
+        <option value="Gryffindor">Gryffindor</option>
+        <option value="Slytherin">Slytherin</option>
+        <option value="Hufflepuff">Hufflepuff</option>
+        <option value="Ravenclaw">Ravenclaw</option>
+      </select>
+      <input type="button" id="filtrar" value="Filtrar" />
     </form>
 
-    <div id = "seccionDeDatos"></div>
+    <div class= "personajesOrdenados" id = "seccionDeDatos"></div>
 
     <template id="templatePersonajes">
       <div><img src="" class="img">
@@ -53,15 +53,14 @@
               </ul>
               <p>Eye Colour: <span class="eyeColourSpan"></span></p>
               <p>Hair Colour: <span class="hairColourSpan"></span></p>
+              <p><span class="aliveSpan"></span></p>
               <p>Actor: <span class="actorSpan"></span></p>
               <p></p>
           </div>
       </div>
   </template>
-    <div id="root"></div>
 
-    <div class= "personajesOrdenados" id = "seccionDeDatos">Todo Comienza aqui</div>
-
+    
     <script type="module" src="main.js"></script>
   </body>
 </html>

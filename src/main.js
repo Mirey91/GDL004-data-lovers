@@ -47,6 +47,9 @@ const funcionMostrar = (arregloPersonajes) => {
          const personajeHairColourSpan = todosPersonajesTemplate.content.querySelector(".hairColourSpan");
          personajeHairColourSpan.textContent = harry.hairColour;
 
+         const personajeAliveSpan = todosPersonajesTemplate.content.querySelector(".aliveSpan");
+         personajeAliveSpan.textContent = harry.alive ? "Alive" : "Dead";
+
          const personajeActorSpan = todosPersonajesTemplate.content.querySelector(".actorSpan");
          personajeActorSpan.textContent = harry.actor;
 
@@ -59,20 +62,11 @@ const funcionMostrar = (arregloPersonajes) => {
 
 funcionMostrar(potterObj);
 
-/*
-//const genderFilter = potterObj.filter(d => d.gender === "female");
-//console.log(genderFilter);
-
-const resultCasa = filtrarPorCasa('Gryffindor', potterObj);
-
-funcionMostrar(resultCasa);
-console.log(resultCasa);
-*/
-
 const ejecutarFiltro = () => {
-    //leer el value del input de la lista de casas!!
-    const resultCasa = filtrarPorCasa('Slytherin', potterObj);
+    let filtroCasas = document.getElementById("tiposDeCasa").value;
+    const resultCasa = filtrarPorCasa(filtroCasas, potterObj);
     funcionMostrar(resultCasa);
 };
 
 document.getElementById("filtrar").addEventListener("click", ejecutarFiltro);
+

@@ -12,6 +12,7 @@ export const filtrarPorCasa = (tipoCasa, potterObj) => {
       if(elementoActual.house === tipoCasa) {
           return true;
       } else {
+        
           return false;
       }
   } );
