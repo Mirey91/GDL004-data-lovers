@@ -27,10 +27,10 @@ const funcionMostrar = (arregloPersonajes) => {
          personajeGenderSpan.textContent = harry.gender;
 
          const personajeAncestrySpan = todosPersonajesTemplate.content.querySelector(".ancestrySpan");
-         personajeAncestrySpan.textContent = harry.ancestry;        
+         personajeAncestrySpan.textContent = harry.ancestry;
 
          const personajePatronusSpan = todosPersonajesTemplate.content.querySelector(".patronusSpan");
-         personajePatronusSpan.textContent = harry.patronus; 
+         personajePatronusSpan.textContent = harry.patronus;
 
          const personajeWoodSpan = todosPersonajesTemplate.content.querySelector(".woodSpan");
          personajeWoodSpan.textContent = harry.wand.wood;
@@ -56,6 +56,7 @@ const funcionMostrar = (arregloPersonajes) => {
          const contenidoTemplate = todosPersonajesTemplate.content;
          const clonePersonajes = document.importNode(contenidoTemplate, true);
          divsContenedor.appendChild(clonePersonajes);
+
     });
 };
 
@@ -64,6 +65,9 @@ funcionMostrar(potterObj);
 
 const ejecutarFiltro = () => {
     let filtroCasas = document.getElementById("tiposDeCasa").value;
+
+const ejecutarFiltro = () => { //esta es la función para filtrar con elementos del html
+  let filtroCasas = document.getElementById("tiposDeCasa").value;
     const resultCasa = filtrarPorCasa(filtroCasas, potterObj);
     funcionMostrar(resultCasa);
 };
