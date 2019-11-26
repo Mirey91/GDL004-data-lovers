@@ -9,39 +9,69 @@
   </head>
 
   <body background= "images/fondo de estrellas.jpg">
-    <div>
-      <center><img src= "images/Harry potter logo.png"></center>
-      <input type= "text" id= "buscador" class= "buscador" placeholder= "Search">
+    <center><img src= "images/Harry potter logo.png"></center>
+      <div class= "buscador">
+        <input type= "text" id= "buscador" placeholder= "Search">
+      </div>
     <br>
 
     <p1>A  B  C  D  E  F  G  H   I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z</p1>
     <br><br>
 
-    <input type= "button" id= "filterBy" value= "Filter by">
-    <br><br>
-    <input type= "button" id= "orderBy" value= "Order by">
-    <br><br>
-      <input type= "button" id= "help" value= "Help">
+    <div id="miModal" class="modal">
+      <div class="modal-contenido">
+        <a href="#">X</a>
+        <h2>Información del personaje</h2>
+        <div class= "infoModal">
+          <div>
+            <p>Name: Harry Potter
+              <br>House: Gryffindor
+              <br>Gender: male
+              <br>Ancestry: half-blood
+              <br>Patronus: stag
+              <br>Wand
+              <br>Wood: holly
+              <br>Core: phoenix feather
+              <br>Length: 11
+              <br>Eye Colour: green
+              <br>Hair Colour: black
+              <br>Alive
+              <br>Actor: Daniel Radcliffe</p>
+            </div>
+            <div>
+              <img src= "http://hp-api.herokuapp.com/images/harry.jpg">
+            </div>
+          </div>
+      </div>
+    </div>
+
 
     <br><br>
     <form>
-      <input list = "casas" name="casas">
-      <datalist id="casas">
-        <option value="Gryffindor" id="gry">
-        <option value="Slytherin" id="sly">
-        <option value="Hufflepuff" id="huf">
-        <option value="Ravenclaw" id="rav">
-      </datalist>
-      <input type="button" id="filtrar" value="Filtrar" /> 
+      <select id="tiposDeCasa">
+        <option value="Gryffindor">Gryffindor</option>
+        <option value="Slytherin">Slytherin</option>
+        <option value="Hufflepuff">Hufflepuff</option>
+        <option value="Ravenclaw">Ravenclaw</option>
+      </select>
+
+      <input type="button" id="filtrar" value="Filtrar" />
     </form>
 
     <div id = "seccionDeDatos"></div>
+    <div class= "personajesOrdenados" id = "seccionDeDatos"></div>
 
     <template id="templatePersonajes">
-      <div><img src="" class="img">
+      <div>
+        <div id= "infoMostrada">
+          <img src="" class="img">
           <p>Name: <span class="nameSpan"></span> </p>
           <p>House: <span class="houseSpan"></span></p>
-          <div class="masInfo">
+          <a href="#miModal">
+            <input type= "button" id="seeMore" value= "See more">
+          </a>
+        </div>
+          <div id= "infoOculta" class="masInfo">
               <p>Gender: <span class="genderSpan"></span></p>
               <p>Ancestry: <span class="ancestrySpan"></span></p>
               <p>Patronus: <span class="patronusSpan"></span></p>
@@ -53,14 +83,12 @@
               </ul>
               <p>Eye Colour: <span class="eyeColourSpan"></span></p>
               <p>Hair Colour: <span class="hairColourSpan"></span></p>
+              <p><span class= "statusSpan"></span></p>
               <p>Actor: <span class="actorSpan"></span></p>
               <p></p>
           </div>
       </div>
   </template>
-    <div id="root"></div>
-
-    <div class= "personajesOrdenados" id = "seccionDeDatos">Todo Comienza aqui</div>
 
     <script type="module" src="main.js"></script>
   </body>
