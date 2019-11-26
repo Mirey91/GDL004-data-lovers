@@ -47,8 +47,8 @@ const funcionMostrar = (arregloPersonajes) => {
          const personajeHairColourSpan = todosPersonajesTemplate.content.querySelector(".hairColourSpan");
          personajeHairColourSpan.textContent = harry.hairColour;
 
-         const personajeStatusSpan = todosPersonajesTemplate.content.querySelector(".statusSpan");
-         personajeStatusSpan.textContent = harry.alive ? "Alive" : "Dead";
+         const personajeAliveSpan = todosPersonajesTemplate.content.querySelector(".aliveSpan");
+         personajeAliveSpan.textContent = harry.alive ? "Alive" : "Dead";
 
          const personajeActorSpan = todosPersonajesTemplate.content.querySelector(".actorSpan");
          personajeActorSpan.textContent = harry.actor;
@@ -62,15 +62,9 @@ const funcionMostrar = (arregloPersonajes) => {
 
 
 funcionMostrar(potterObj);
-/*
-//const genderFilter = potterObj.filter(d => d.gender === "female");
-//console.log(genderFilter);
 
-const resultCasa = filtrarPorCasa('Gryffindor', potterObj);
-
-funcionMostrar(resultCasa);
-console.log(resultCasa);
-*/
+const ejecutarFiltro = () => {
+    let filtroCasas = document.getElementById("tiposDeCasa").value;
 
 const ejecutarFiltro = () => { //esta es la función para filtrar con elementos del html
   let filtroCasas = document.getElementById("tiposDeCasa").value;
@@ -79,3 +73,4 @@ const ejecutarFiltro = () => { //esta es la función para filtrar con elementos 
 };
 
 document.getElementById("filtrar").addEventListener("click", ejecutarFiltro);
+

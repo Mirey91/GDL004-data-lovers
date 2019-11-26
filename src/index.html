@@ -48,17 +48,15 @@
 
     <br><br>
     <form>
-      <select id="tiposDeCasa">
+       <select id="tiposDeCasa"> 
+        <option value=false>select house</option>
         <option value="Gryffindor">Gryffindor</option>
         <option value="Slytherin">Slytherin</option>
         <option value="Hufflepuff">Hufflepuff</option>
         <option value="Ravenclaw">Ravenclaw</option>
       </select>
-
       <input type="button" id="filtrar" value="Filtrar" />
     </form>
-
-    <div id = "seccionDeDatos"></div>
     <div class= "personajesOrdenados" id = "seccionDeDatos"></div>
 
     <template id="templatePersonajes">
@@ -83,13 +81,14 @@
               </ul>
               <p>Eye Colour: <span class="eyeColourSpan"></span></p>
               <p>Hair Colour: <span class="hairColourSpan"></span></p>
-              <p><span class= "statusSpan"></span></p>
+              <p><span class="aliveSpan"></span></p>
               <p>Actor: <span class="actorSpan"></span></p>
               <p></p>
           </div>
       </div>
   </template>
 
+    
     <script type="module" src="main.js"></script>
   </body>
 </html>
