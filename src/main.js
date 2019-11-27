@@ -2,6 +2,11 @@ import potterObj from './data/potter/potter.js';
 import { filtrarPorCasa } from './data.js';
 
 
+/*const verModal = (event)=> {
+  const anchorElement = event.target;
+  const referenciaPadre = anchorElement.closest(".infoMostrada");
+  const divSeeMore = referenciaPadre.querySelector(".infoOculta");
+}*/
 
 const funcionMostrar = (arregloPersonajes) => {
     const divsContenedor = document.querySelector("#seccionDeDatos");
@@ -57,14 +62,17 @@ const funcionMostrar = (arregloPersonajes) => {
          const clonePersonajes = document.importNode(contenidoTemplate, true);
          divsContenedor.appendChild(clonePersonajes);
 
+         /*const listaElementosConClase = document.getElementsByClassName("seeMore");
+
+         for(let elemento of listaElementosConClase) {
+           elemento.addEventListener("click", verModal);
+         }*/
+
     });
 };
 
 
 funcionMostrar(potterObj);
-
-const ejecutarFiltro = () => {
-    let filtroCasas = document.getElementById("tiposDeCasa").value;
 
 const ejecutarFiltro = () => { //esta es la función para filtrar con elementos del html
   let filtroCasas = document.getElementById("tiposDeCasa").value;
@@ -73,4 +81,3 @@ const ejecutarFiltro = () => { //esta es la función para filtrar con elementos 
 };
 
 document.getElementById("filtrar").addEventListener("click", ejecutarFiltro);
-

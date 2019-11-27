@@ -12,9 +12,18 @@ export const filtrarPorCasa = (tipoCasa, potterObj) => {
       if(elementoActual.house === tipoCasa) {
           return true;
       } else {
-        
+
           return false;
       }
   } );
   return resultado;
 };
+
+const ordenarAscendente = (objeto1, objeto2) => {
+  if(objeto1.name > objeto2.name) {
+    return 1;
+  }
+};
+
+/*const valoresOrdenados = potterObj.sort(ordenarAscendente);
+console.log(valoresOrdenados);*/
