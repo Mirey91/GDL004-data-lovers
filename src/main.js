@@ -62,13 +62,12 @@ const funcionMostrar = (arregloPersonajes) => {
          const contenidoTemplate = todosPersonajesTemplate.content;
          const clonePersonajes = document.importNode(contenidoTemplate, true);
          divsContenedor.appendChild(clonePersonajes);
-/*
-         const listaElementosConClase = document.getElementsByClassName("seeMore");
-        
+
+         /*const listaElementosConClase = document.getElementsByClassName("seeMore");
+
          for(let elemento of listaElementosConClase) {
-             elemento.addEventListener("click", verModal);
-         }
-*/
+           elemento.addEventListener("click", verModal);
+         }*/
     });
 };
 
@@ -93,4 +92,3 @@ const ejecutarOrden = () => {
 };
 
 document.getElementById("order").addEventListener("click", ejecutarOrden);
-

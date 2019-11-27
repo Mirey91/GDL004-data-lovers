@@ -48,25 +48,25 @@
 
     <br><br>
     <form>
-       <select id="tiposDeCasa"> 
-        <option value=false>select house</option>
-        <option value="Gryffindor">Gryffindor</option>
-        <option value="Slytherin">Slytherin</option>
-        <option value="Hufflepuff">Hufflepuff</option>
-        <option value="Ravenclaw">Ravenclaw</option>
+       <select id="tiposDeCasa">
+          <option value=false>Select house</option>
+          <option value="Gryffindor">Gryffindor</option>
+          <option value="Slytherin">Slytherin</option>
+          <option value="Hufflepuff">Hufflepuff</option>
+          <option value="Ravenclaw">Ravenclaw</option>
       </select>
       <input type="button" id="filtrar" value="Filtrar" />
     </form>
     <br>
-    <form id="ordenar">
-        <select id="orderAZ">
-            <option>Select Order</option>
-            <option value="ascendente">Order A → Z</option>
-            <option value="descendente">Order Z → A</option>
-        </select>
-        <input type="button" id="order" value="order" />
+
+    <form>
+      <select id= "orderAz">
+        <option>Select order</option>
+        <option value= "ascendente">A → Z</option>
+        <option value= "descendente">Z → A</option>
+      </select>
+        <input type="button" id="order" value="Order" />
     </form>
-    
 
     <div class= "personajesOrdenados" id = "seccionDeDatos"></div>
 
@@ -77,7 +77,8 @@
           <p>Name: <span class="nameSpan"></span> </p>
           <p>House: <span class="houseSpan"></span></p>
           <a href="#miModal">
-            <input type= "button" id="seeMore" value= "See more" class="seeMore">
+            <input type= "button" id="seeMore" value= "See more" class= "seeMore">
+
           </a>
         </div>
           <div id= "infoOculta" class="masInfo">
@@ -99,7 +100,7 @@
       </div>
   </template>
 
-    
+
     <script type="module" src="main.js"></script>
   </body>
 </html>
