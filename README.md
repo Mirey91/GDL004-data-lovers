@@ -50,9 +50,9 @@ y de equipo.
 - [✔] Colaborar en Github (pull requests).
 
 ### Linter y Organización
-- [✔] Organizar y dividir el código en módulos (Modularización).
-- [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
-- [✔] Utilizar linter para seguir buenas prácticas (ESLINT).
+[✔] Organizar y dividir el código en módulos (Modularización).
+[ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
+[✔] Utilizar linter para seguir buenas prácticas (ESLINT).
 
 ## 2. Avances Esperados
 
@@ -66,16 +66,16 @@ Primero se hizo un prototipo en papel basándonos en la información que tendrí
 
 ### Historias de usuario
 
-- 1. Como fan de Harry Potter, quiero ver la información de los diferentes personajes
+1. Como fan de Harry Potter, quiero ver la información de los diferentes personajes
 para un juego de rol.
 
-- 2. Como fan de Harry Potter, quiero saber a qué casa pertenece Harry Potter para
+2. Como fan de Harry Potter, quiero saber a qué casa pertenece Harry Potter para
 corroborar si estoy en lo correcto.
 
-- 3. Como un potencial fan de Harry Potter, quiero consultar y conocer las
+3. Como un potencial fan de Harry Potter, quiero consultar y conocer las
 características específicas de cada personaje para entender las películas.
 
-- 4. Como potencial fan de Harry Potter, quiero encontrar fácilmente un personaje
+4. Como potencial fan de Harry Potter, quiero encontrar fácilmente un personaje
 de forma alfabética para un juego de rol.
 
 ### Criterios de Aceptación
