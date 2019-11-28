@@ -28,8 +28,7 @@ const comparaObj = (objeto1, objeto2) => {
  return 0
 };
 
-export const ordenarAscendente = (potterObj) => {
+export const ordenarAscendente = (potterObj) => { //Creo que esto debe de ir en la línea 21
   const valoresOrdenados = potterObj.sort(comparaObj);
-  console.log(valoresOrdenados);
   return valoresOrdenados;
 };
