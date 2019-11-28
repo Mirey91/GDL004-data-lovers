@@ -50,9 +50,9 @@ y de equipo.
 - [✔] Colaborar en Github (pull requests).
 
 ### Linter y Organización
-[✔] Organizar y dividir el código en módulos (Modularización).
-[ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
-[✔] Utilizar linter para seguir buenas prácticas (ESLINT).
+- [✔] Organizar y dividir el código en módulos (Modularización).
+- [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
+- [✔] Utilizar linter para seguir buenas prácticas (ESLINT).
 
 ## 2. Avances Esperados
 
