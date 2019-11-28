@@ -19,11 +19,17 @@ export const filtrarPorCasa = (tipoCasa, potterObj) => {
   return resultado;
 };
 
-const ordenarAscendente = (objeto1, objeto2) => {
-  if(objeto1.name > objeto2.name) {
-    return 1;
-  }
+const comparaObj = (objeto1, objeto2) => {
+ if(objeto1.name > objeto2.name) {
+   return 1;
+ }else if(objeto1.name < objeto2.name){
+   return -1;
+ }
+ return 0
 };
 
-/*const valoresOrdenados = potterObj.sort(ordenarAscendente);
-console.log(valoresOrdenados);*/
+export const ordenarAscendente = (potterObj) => {
+  const valoresOrdenados = potterObj.sort(comparaObj);
+  console.log(valoresOrdenados);
+  return valoresOrdenados;
+};
