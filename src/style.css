@@ -1,8 +1,8 @@
-p1{
+/*p1{
   display: flex;
   justify-content: center;
   color: white;
-}
+}*/
 
 .buscador{
   display: flex;
@@ -34,6 +34,7 @@ p1{
   height: 200px;
 }
 
+/*
 .modal-contenido{
   color: darkgoldenrod;
   background-color: Black;
@@ -60,8 +61,12 @@ p1{
   color: darkgoldenrod;
   pointer-events: auto;
 }
-
-/*.seeMore {
-  background-color: green;
-}
 */
+.button{
+  background-color: white;
+  color: black;
+  border-color: black;
+  font-family: raleway;
+  font-size: 16px;
+  border-radius: 8px;
+}
