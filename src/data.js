@@ -34,7 +34,18 @@ export const ordenarAscendente = (potterObj) => {
   return valoresOrdenados;
 };
 
-
-//const valoresOrdenados = potterObj.sort(ordenarAscendente);
-
-//console.log(valoresOrdenados);
+const comparaObjDes = (objeto1, objeto2) => {
+  if(objeto1.name < objeto2.name) {
+    return 1;
+  }else if(objeto1.name > objeto2.name){
+    return -1;
+  }
+  return 0
+ };
+ 
+ export const ordenarDescendente = (potterObj) => {
+   const valoresOrdenadosDes = potterObj.sort(comparaObjDes);
+   console.log(valoresOrdenadosDes);
+   return valoresOrdenadosDes;
+ };
+ 
