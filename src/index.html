@@ -11,21 +11,17 @@
 
 <body background="images/fondo de estrellas.jpg">
   <center><img src="images/Harry potter logo.png"></center>
-  <div class="buscador">
-    <input type="text" id="buscador" placeholder="Search">
-  </div>
-  <br>
 
   <br><br>
-  <form>
+  <form class= "filtrarForm">
     <select id="tiposDeCasa">
-      <option value=false>select house</option>
+      <option value=false>Select house</option>
       <option value="Gryffindor">Gryffindor</option>
       <option value="Slytherin">Slytherin</option>
       <option value="Hufflepuff">Hufflepuff</option>
       <option value="Ravenclaw">Ravenclaw</option>
     </select>
-    <input type="button" id="filtrar" value="Filtrar" />
+    <input type="button" id="filtrar" value="Filtrar" class="button"/>
   </form>
   <br>
   <form id="ordenar">
@@ -38,13 +34,12 @@
   <template id="templatePersonajes">
     <div class="flip-card">
       <div class="flip-card-inner">
-        <div id="infoMostrada">
+        <div id="infoMostrada" class="infoMostrada">
           <img src="" class="img">
-          <p>Name: <span class="nameSpan"></span> </p>
+          <p><span class="nameSpan"></span> </p>
           <p>House: <span class="houseSpan"></span></p>
             <input type= "button" id="seeMore" value= "See more" class= "button">
 
-        
         </div>
         <div id="infoOculta" class="masInfo">
           <p>Gender: <span class="genderSpan"></span></p>
