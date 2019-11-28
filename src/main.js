@@ -1,5 +1,5 @@
 import potterObj from './data/potter/potter.js';
-import { filtrarPorCasa, ordenarAscendente } from './data.js';
+import { filtrarPorCasa, ordenarAscendente, ordenarDescendente } from './data.js';
 
 /*
 const verModal = (event) => {
@@ -91,4 +91,15 @@ const ejecutarOrden = () => {
    funcionMostrar(ordenadas);
 };
 
-document.getElementById("order").addEventListener("click", ejecutarOrden);
+document.getElementById("orderAZ").addEventListener("click", ejecutarOrden);
+
+const ejecutarOrdenZA = () => {
+    //let ordenaNombre = document.getElementById("orderAZ").value;
+   //const resultOrden = ordenarAscendente(potterObj.name, potterObj.name);
+   const ordenadas = ordenarDescendente(potterObj);
+   console.log(ordenadas)
+   funcionMostrar(ordenadas);
+};
+
+document.getElementById("orderZA").addEventListener("click", ejecutarOrdenZA);
+

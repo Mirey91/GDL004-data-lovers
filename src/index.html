@@ -1,106 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <title>Data Lovers</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body background= "images/fondo de estrellas.jpg">
-    <center><img src= "images/Harry potter logo.png"></center>
-      <div class= "buscador">
-        <input type= "text" id= "buscador" placeholder= "Search">
-      </div>
-    <br>
+<head>
+  <meta charset="UTF-8">
+  <title>Data Lovers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <p1>A  B  C  D  E  F  G  H   I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z</p1>
-    <br><br>
+<body background="images/fondo de estrellas.jpg">
+  <center><img src="images/Harry potter logo.png"></center>
+  <div class="buscador">
+    <input type="text" id="buscador" placeholder="Search">
+  </div>
+  <br>
 
-    <div id="miModal" class="modal">
-      <div class="modal-contenido">
-        <a href="#">X</a>
-        <h2>Información del personaje</h2>
-        <div class= "infoModal">
-          <div>
-            <p>Name: Harry Potter
-              <br>House: Gryffindor
-              <br>Gender: male
-              <br>Ancestry: half-blood
-              <br>Patronus: stag
-              <br>Wand
-              <br>Wood: holly
-              <br>Core: phoenix feather
-              <br>Length: 11
-              <br>Eye Colour: green
-              <br>Hair Colour: black
-              <br>Alive
-              <br>Actor: Daniel Radcliffe</p>
-            </div>
-            <div>
-              <img src= "http://hp-api.herokuapp.com/images/harry.jpg">
-            </div>
-          </div>
+  <p1>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p1>
+  <br><br>
+
+  <div id="miModal" class="modal">
+    <div class="modal-contenido">
+      <a href="#">X</a>
+      <h2>Información del personaje</h2>
+      <div class="infoModal">
+        <div>
+          <p>Name: Harry Potter
+            <br>House: Gryffindor
+            <br>Gender: male
+            <br>Ancestry: half-blood
+            <br>Patronus: stag
+            <br>Wand
+            <br>Wood: holly
+            <br>Core: phoenix feather
+            <br>Length: 11
+            <br>Eye Colour: green
+            <br>Hair Colour: black
+            <br>Alive
+            <br>Actor: Daniel Radcliffe</p>
+        </div>
+        <div>
+          <img src="http://hp-api.herokuapp.com/images/harry.jpg">
+        </div>
       </div>
     </div>
+  </div>
 
 
-    <br><br>
-    <form>
-       <select id="tiposDeCasa">
-          <option value=false>Select house</option>
-          <option value="Gryffindor">Gryffindor</option>
-          <option value="Slytherin">Slytherin</option>
-          <option value="Hufflepuff">Hufflepuff</option>
-          <option value="Ravenclaw">Ravenclaw</option>
-      </select>
-      <input type="button" id="filtrar" value="Filtrar" />
-    </form>
-    <br>
+  <br><br>
+  <form>
+    <select id="tiposDeCasa">
+      <option value=false>select house</option>
+      <option value="Gryffindor">Gryffindor</option>
+      <option value="Slytherin">Slytherin</option>
+      <option value="Hufflepuff">Hufflepuff</option>
+      <option value="Ravenclaw">Ravenclaw</option>
+    </select>
+    <input type="button" id="filtrar" value="Filtrar" />
+  </form>
+  <br>
+  <form id="ordenar">
+    <!--<select id="orderAZ">
+            <option>Select Order</option>
+            <option value="ascendente">Order A → Z</option>
+            <option value="descendente">Order Z → A</option>
+        </select>-->
+    <input type="button" id="orderAZ" value="Order A → Z " class="button" />
+    <input type="button" id="orderZA" value="Order Z → A" class="button" />
+  </form>
 
-    <form>
-      <select id= "orderAz">
-        <option>Select order</option>
-        <option value= "ascendente">A → Z</option>
-        <option value= "descendente">Z → A</option>
-      </select>
-        <input type="button" id="order" value="Order" />
-    </form>
 
-    <div class= "personajesOrdenados" id = "seccionDeDatos"></div>
+  <div class="personajesOrdenados" id="seccionDeDatos"></div>
 
-    <template id="templatePersonajes">
-      <div>
-        <div id= "infoMostrada">
+  <template id="templatePersonajes">
+    <div class="flip-card">
+      <div class="flip-card-inner"> 
+        <div id="infoMostrada">
           <img src="" class="img">
           <p>Name: <span class="nameSpan"></span> </p>
           <p>House: <span class="houseSpan"></span></p>
           <a href="#miModal">
-            <input type= "button" id="seeMore" value= "See more" class= "seeMore">
-
+            <input type="button" id="seeMore" value="See more" class="seeMore">
           </a>
         </div>
-          <div id= "infoOculta" class="masInfo">
-              <p>Gender: <span class="genderSpan"></span></p>
-              <p>Ancestry: <span class="ancestrySpan"></span></p>
-              <p>Patronus: <span class="patronusSpan"></span></p>
-              <p>Wand:</p>
-              <ul>
-                  <li>Wood: <span class="woodSpan"></span></li>
-                  <li>Core: <span class="coreSpan"></span></li>
-                  <li>Length: <span class="lengthSpan"></span></li>
-              </ul>
-              <p>Eye Colour: <span class="eyeColourSpan"></span></p>
-              <p>Hair Colour: <span class="hairColourSpan"></span></p>
-              <p><span class="aliveSpan"></span></p>
-              <p>Actor: <span class="actorSpan"></span></p>
-              <p></p>
-          </div>
+        <div id="infoOculta" class="masInfo">
+          <p>Gender: <span class="genderSpan"></span></p>
+          <p>Ancestry: <span class="ancestrySpan"></span></p>
+          <p>Patronus: <span class="patronusSpan"></span></p>
+          <p>Wand:</p>
+          <ul>
+            <li>Wood: <span class="woodSpan"></span></li>
+            <li>Core: <span class="coreSpan"></span></li>
+            <li>Length: <span class="lengthSpan"></span></li>
+          </ul>
+          <p>Eye Colour: <span class="eyeColourSpan"></span></p>
+          <p>Hair Colour: <span class="hairColourSpan"></span></p>
+          <p><span class="aliveSpan"></span></p>
+          <p>Actor: <span class="actorSpan"></span></p>
+          <p></p>
+        </div>
       </div>
+    </div>
   </template>
 
 
-    <script type="module" src="main.js"></script>
-  </body>
+  <script type="module" src="main.js"></script>
+</body>
+
 </html>
