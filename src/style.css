@@ -34,34 +34,11 @@ p1{
   height: 200px;
 }
 
-.modal-contenido{
-  color: darkgoldenrod;
-  background-color: Black;
-  width: 600px;
-  height: 400px;
-  padding: 10px 20px;
-  margin: 20% auto;
-  position: relative;
+.button{
+  background-color: white;
+  color: black;
+  border-color: black;
+  font-family: raleway;
+  font-size: 16px;
+  border-radius: 8px;
 }
-.modal{
-  background-color: rgba(0,0,0,.8);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 1s;
-}
-
-#miModal:target{
-  opacity: 1;
-  color: darkgoldenrod;
-  pointer-events: auto;
-}
-
-/*.seeMore {
-  background-color: green;
-}
-*/
