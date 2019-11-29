@@ -6,8 +6,7 @@ export const example = () => {
   return 'example';
 };
 
-export const filtrarPorCasa = (tipoCasa, potterObj) => {
-
+const filtrarPorCasa = (tipoCasa, potterObj) => {
   const resultado = potterObj.filter( (elementoActual) =>{
       if(elementoActual.house === tipoCasa) {
           return true;
@@ -16,8 +15,11 @@ export const filtrarPorCasa = (tipoCasa, potterObj) => {
           return false;
       }
   } );
+  // console.log(resultado);
   return resultado;
 };
+
+export default filtrarPorCasa;
 
 const comparaObj = (objeto1, objeto2) => {
  if(objeto1.name > objeto2.name) {
