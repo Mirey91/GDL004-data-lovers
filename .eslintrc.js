@@ -4,6 +4,7 @@ module.exports = {
     es6: true,
     'jest/globals': true,
   },
+
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
