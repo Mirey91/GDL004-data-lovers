@@ -1,12 +1,6 @@
 /* Manejo de data */
 
-// esta es una función de ejemplo
-
-export const example = () => {
-  return 'example';
-};
-
-const filtrarPorCasa = (tipoCasa, potterObj) => {
+export const filtrarPorCasa = (tipoCasa, potterObj) => {
   const resultado = potterObj.filter( (elementoActual) =>{
       if(elementoActual.house === tipoCasa) {
           return true;
@@ -19,7 +13,6 @@ const filtrarPorCasa = (tipoCasa, potterObj) => {
   return resultado;
 };
 
-export default filtrarPorCasa;
 
 const comparaObj = (objeto1, objeto2) => {
  if(objeto1.name > objeto2.name) {
