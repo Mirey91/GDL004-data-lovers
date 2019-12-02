@@ -1,19 +1,10 @@
 import potterObj from './data/potter/potter.js';
 import { filtrarPorCasa, ordenarAscendente, ordenarDescendente } from './data.js';
 
-/*
-const verModal = (event) => {
-    const anchorElement = event.target;
-    const referenciaPadre = anchorElement.closest(".infoMostrada");
-    const divSeeMore = referenciaPadre.querySelector(".masInfo");
-    console.log (divSeeMore);
-}
-*/
 const funcionMostrar = (arregloPersonajes) => {
     const divsContenedor = document.querySelector("#seccionDeDatos");
     divsContenedor.classList.add("personajesOrdenados");
 
-    //borrar el contenido de divsContenedor
     document.getElementById("seccionDeDatos").innerHTML = "";
 
     arregloPersonajes.map(function (harry) {
@@ -63,11 +54,6 @@ const funcionMostrar = (arregloPersonajes) => {
          const clonePersonajes = document.importNode(contenidoTemplate, true);
          divsContenedor.appendChild(clonePersonajes);
 
-         /*const listaElementosConClase = document.getElementsByClassName("seeMore");
-
-         for(let elemento of listaElementosConClase) {
-           elemento.addEventListener("click", verModal);
-         }*/
     });
 };
 
@@ -75,7 +61,6 @@ const funcionMostrar = (arregloPersonajes) => {
 funcionMostrar(potterObj);
 
 const ejecutarFiltro = () => {
-     //esta es la función para filtrar con elementos del html
     let filtroCasas = document.getElementById("tiposDeCasa").value;
     const resultCasa = filtrarPorCasa(filtroCasas, potterObj);
     funcionMostrar(resultCasa);
@@ -84,8 +69,6 @@ const ejecutarFiltro = () => {
 document.getElementById("filtrar").addEventListener("click", ejecutarFiltro);
 
 const ejecutarOrden = () => {
-    //let ordenaNombre = document.getElementById("orderAZ").value;
-   //const resultOrden = ordenarAscendente(potterObj.name, potterObj.name);
    const ordenadas = ordenarAscendente(potterObj);
    console.log(ordenadas)
    funcionMostrar(ordenadas);
@@ -94,8 +77,6 @@ const ejecutarOrden = () => {
 document.getElementById("orderAZ").addEventListener("click", ejecutarOrden);
 
 const ejecutarOrdenZA = () => {
-    //let ordenaNombre = document.getElementById("orderAZ").value;
-   //const resultOrden = ordenarAscendente(potterObj.name, potterObj.name);
    const ordenadas = ordenarDescendente(potterObj);
    console.log(ordenadas)
    funcionMostrar(ordenadas);
